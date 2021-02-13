@@ -6,8 +6,8 @@ uniform vec2 u_resolution;
 uniform float u_time;
 
 void main() {
-    vec2 coord = (gl_FragCoord.xy * 2. - u_resolution) / min(u_resolution.x, u_resolution.y);
     // vec2 coord = gl_FragCoord.xy / u_resolution;
+    vec2 coord = (gl_FragCoord.xy * 2. - u_resolution) / min(u_resolution.x, u_resolution.y);
 
     coord -= vec2(0.5);
 

@@ -29,3 +29,56 @@ https://thebookofshaders.com/edit.php
 0.1   1.1
 
 0.0   1.0
+
+==========================================
+LEARNED:
+
+1. vec2 position = gl_FragCoord.xy / u_resolution; --> 0 ... 1
+2. step(threshold, value)                          --> 0 or 1
+3. mix(value1, value2, percentPoint)               --> linear: value1 -> percentPoint <- value2
+
+4. sin(u_time)            --> oscillator
+5. sin(x + cos(u_time))   --> oscillate sin(x) function
+6. sin( length(coord.x) ) --> the same around circle
+
+7. uniforms: u_resolution, u_mouse, u_time
+
+8. 
+    image: 800x600
+    1      2      px
+    1/800  2/800  %
+    0.0013 0.0025 
+
+    window: 1600x600
+    1       2       3      4      px
+    1/1600  2/1600  3/1600 4/1600 %
+    0.0006  0.0013  0.0019 0.0025
+
+    0.0013 - 0.0025
+          \ /
+          0.0006 0.0013 0.0019 0.025
+
+    1 img -> 4 window
+
+uniform sampler2D u_tex0;
+gl_FragColor = texture2D(u_tex0, coord);
+
+9. 
+    [2] dot [3] = 2*3 + 7*8 = 62
+    [7]     [8]
+
+    rotate [cos x  -sin x]
+           [sin x   cos x]
+    
+    [2 3] * [3]  [2*3 + 3*8] [30]
+    [7 5]   [8]  [7*3 + 5*8] [61]
+
+     2x2  * 2x1 = 2x1
+
+10. vec2 * mat2 = 
+    [x x] * [x]
+    [x x]   [x]
+
+    mat2 * vec2 =
+    [x x] * [x x]
+            [x x]
