@@ -1,0 +1,9 @@
+#ifdef GL_ES
+    precision mediump float;
+#endif
+
+void main() {
+    vec3 color = vec3(1.0, .5, .3);
+    gl_FragColor = vec4(color, 1.0);
+    // gl_FragColor = vec4(vec3(1.0, .5, .3), 1.0);
+}

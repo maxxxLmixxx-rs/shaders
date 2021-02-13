@@ -1,0 +1,31 @@
+# https://www.youtube.com/watch?v=9k9ExCKnkVQ&list=PL4neAtv21WOmIrTrkNO3xCyrxg4LKkrF7&index=5
+
+1. ext: shader languages support
+2. ext: glsl-canvas
+3. ext: glsl lint
+    x https://github.com/KhronosGroup/glslang/releases/tag/master-tot
+    x "glsllint.glslangValidatorPath": "/home/maxxxLmixxx/Documents/.GLSLinter/bin/glslangValidator"
+4. user snippets
+    x https://gist.github.com/lewlepton/8b17f56baa7f1790a70284e7520f9623
+5. glslViewer
+    x https://github.com/patriciogonzalezvivo/glslViewer
+
+
+http://glslsandbox.com/
+https://thebookofshaders.com/edit.php
+
+==========================================
+
+# gl_FragColor
+# gl_ES - embedded systems
+# gl_FragCoord
+
+# uniform -> global const
+  u_resolution
+  u_mouse
+  u_time
+
+
+0.1   1.1
+
+0.0   1.0
