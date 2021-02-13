@@ -9,9 +9,10 @@ void main() { // sin (length) -> circles [the same distance around the center]
   vec2 coord = gl_FragCoord.xy / u_resolution;
   vec3 color = vec3(0.0);
 
-  coord.y -= 0.25;
-  float angle = atan(-coord.y + 0.25, coord.x - 0.5) * 0.1; 
-  float len = length(coord - vec2(0.5, 0.25));
+  coord -= vec2(0.5, 0.5);
+
+  float angle = atan(-coord.y, coord.x) * 0.1; 
+  float len = length(coord);
 
   color.r += sin(len * 40. + angle * 40. + u_time);
   color.g += cos(len * 30. + angle * 60. - u_time);
